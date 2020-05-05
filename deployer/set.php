@@ -11,10 +11,6 @@ set('allow_anonymous_stats', false);
 set('web_path', 'web/');
 set('default_timeout', 900);
 
-set('local/bin/wp', function () {
-    return './vendor/bin/wp';
-});
-
 set('shared_dirs', [
         'web/app/uploads',
     ]

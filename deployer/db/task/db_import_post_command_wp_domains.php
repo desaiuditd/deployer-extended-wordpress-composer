@@ -27,7 +27,7 @@ task('db:import:post_command:wp_domains', function () {
     if (count($currentInstancePublicUrls) === count($sourceInstancePublicUrls)) {
         $publicUrlsPairs = array_combine($sourceInstancePublicUrls, $currentInstancePublicUrls);
         foreach ($publicUrlsPairs as $publicUrlOld => $publicUrlNew) {
-            runLocally('{{local/bin/wp}} search-replace ' .
+            runLocally('wp search-replace ' .
                 escapeshellarg(rtrim($publicUrlOld, '/')) . ' '
                 . escapeshellarg(rtrim($publicUrlNew, '/'))
             );
